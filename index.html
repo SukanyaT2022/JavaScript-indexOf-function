@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <input type="text" id="putEmail">
+    <input type="button" value="Submit" onclick="check()">
+
+    <script>
+        /*
+        Write a javascript code to input email id of a person in a text box. On click of button validate, call a function which reads the email id from the text box and finds the index of @ in the email id If found we print its valid else invalid
+        
+        How to use indexOf function
+        
+        we make sure all email id is invalid
+        check 1 If user put @ show valid /check 2 @ should not begin and end/
+        if user not put @ show invalid
+
+        check for . for homework
+        */
+        function check() {
+
+            var email = document.getElementById("putEmail").value;
+            //indexOf(" ") is a key word important fuction to search for and -1 mean @ or character not found in string
+            if (email.indexOf("@") == -1) {
+                alert("Email id is invalid")
+            }
+
+            else {
+                //indexOf("@")== 0 means if @ is found at position 0 or first character in email
+                //check if @ not at the begining
+                if (email.indexOf("@") == 0) {
+                    alert("Your id is invalid")
+                }
+                //check if @ not at last character if yes is invalid
+                else if (email.indexOf("@") == email.length - 1) {
+                    //length-1 becasue position start from 0
+                    alert("Your id is invalid")
+                }
+                else {
+                    alert("Your id is valid")
+                }
+                alert("Email id is valid")
+            }
+
+
+        }
+
+
+    </script>
+</body>
+
+</html>
