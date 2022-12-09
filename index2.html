@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<input type="text" id="correctEmail" >
+<input type="button" value="Your Email" onclick="check()">
+
+    <script>
+        //check if @ email has only one 
+        function check(){
+         var e = document.getElementById("correctEmail").value
+         //check from the front indexOf and check from the back lastIndexOf--it has to have only one @ then valid
+         if (e.indexOf("@")==e.lastIndexOf("@")&&e.indexOf("@")!= -1){
+            //other condition &&e.indexOf("@")!= -1) mean if email id not have @ it not find @ it show invalid-- -1 mean if not found
+alert("Email id is valid")
+         }
+         //if not mean have @@ which is invalid
+         else{
+            alert ("Email is invalid")
+         }
+        }
+
+
+
+
+    </script>
+    
+</body>
+</html>
